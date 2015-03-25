@@ -8,14 +8,14 @@ class LdsConnect
   AUTHORIZE_URL = "#{SITE_URL}/dialog/authorize"
 
   def initialize(client_id, client_secret, options={})
-    client_options = {
-      site: SITE_URL,
-      authorize_url: AUTHORIZE_URL
-    }
-    @options = options
-    if @options[:scope]
-      client_options[:scope] = @options[:scope]
-    end
+    # make sure all options for the OAuth module and faraday
+    # pass all the way down
+    client_options = options.dup
+    client_options[:site] = SITE_URL
+    client_options[:authorize_url] = AUTHORIZE_URL
+
+    @options = client_options
+
     @client = OAuth2::Client.new(client_id, client_secret, client_options)
   end
 
