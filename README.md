@@ -3,7 +3,7 @@ Depracated
 
 LDS I/O uses [OAuth3](https://github.com/OAuth3), so it doesn't require an LDS I/O specific module.
 
-See <https://github.com/LDSorg/backend-oauth2-ruby-sinatra-example> and <https://github.com/OAuth3/ruby-oauth3>.
+See [LDS I/O ruby sinatra example](https://github.com/LDSorg/backend-oauth2-ruby-sinatra-example) and [ruby-oauth3](https://github.com/OAuth3/ruby-oauth3).
 
 # ruby-lds-connect-gem
 Ruby / Sinatra OAuth2 authentication strategy for connecting to lds.org thru LDS Connect
